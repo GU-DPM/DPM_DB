@@ -2,4 +2,4 @@
 
 This is the repository for setting up a local SQL database from DPM simulaton results.
 
-# Installation usins pip
+# Installation using pip
