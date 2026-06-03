@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "dpm-sqlite"
+version = "0.1.0"
+description = "Load Dynamic Precision Medicine simulation outputs into a local SQLite database"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = []          # stdlib only: sqlite3, csv, pathlib, io
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[project.scripts]
+dpm-db-load = "dpm_sqlite.dpm_loader:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["dpm_sqlite*"]
