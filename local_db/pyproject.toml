@@ -1,6 +1,8 @@
 [build-system]
 requires = ["setuptools>=68", "wheel"]
-build-backend = "setuptools.backends.legacy:build"
+build-backend = "setuptools.build_meta"
+# i changed this to build_meta because  apparently the backends.legacy is not compatible with Python 3.14 or greater, I just upgraded it to the modern one (build_meta) so it works on the modern Python versions 
+
 
 [project]
 name = "dpm-sqlite"
